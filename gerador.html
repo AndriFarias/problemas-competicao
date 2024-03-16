@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Gerador de Senhas</h1>
+        <form id="senhaForm">
+            <div class="form-group">
+                <label for="comprimento">Comprimento da Senha:</label>
+                <input type="number" class="form-control" id="comprimento" required>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="temMaiusculas">
+                <label class="form-check-label" for="temMaiusculas">Incluir letras maiúsculas</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="temMinusculas">
+                <label class="form-check-label" for="temMinusculas">Incluir letras minúsculas</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="temNumeros">
+                <label class="form-check-label" for="temNumeros">Incluir números</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="temEspeciais">
+                <label class="form-check-label" for="temEspeciais">Incluir caracteres especiais</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" id="btnSenha" onclick="gerarSenha()">Gerar Senha</button>
+        </form>
+        <h4 id="resultado" class="mt-3"></h4>
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+            <div id="copy" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <strong class="me-auto">Mensagem</strong>
+                
+              </div>
+              <div class="toast-body">
+                Senha copiada para a área de transferência!
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="./gerador.js"></script>
+</body>
+</html>
